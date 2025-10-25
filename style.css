@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    }
+    /* 1. O Container Grid */
+    .container {
+    display: grid;
+    height: 100vh; /* Para preencher a altura da tela */
+    padding: 10px;
+    gap: 10px; /* Espaço entre as células (gutter) */
+    background-color: #f0f0f0;
+    /* DEFINIÇÃO DAS TRILHAS DE COLUNAS E LINHAS */
+    grid-template-columns: 150px 1fr 200px; /* 3 colunas: 150px | Restante | 200px */
+    grid-template-rows: 80px 1fr 60px; /* 3 linhas: 80px | Restante | 60px */
+    /* O MAPA VISUAL DO LAYOUT COM grid-template-areas */
+    grid-template-areas:
+    "header header header" /* 1a Linha: Header em todas as 3 colunas */
+    "nav main aside" /* 2a Linha: Nav, Main, Aside */
+    "footer footer footer"; /* 3a Linha: Footer em todas as 3 colunas */
+    gap: 20px;
+    }
+
+        /* Estilos dos Itens Grid (Apenas visual) */
+        .item {
+        padding: 15px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        
+        /* 2. Atribuição das Áreas aos Itens */
+        .header {
+        background-color: #2c3e50;
+        grid-area: header; /* Ocupa a área nomeada 'header' */
+        }
+        .nav {
+        background-color: #3498db;
+        grid-area: nav; /* Ocupa a área nomeada 'nav' */
+        }
+        .main {
+        background-color: #2ecc71;
+        grid-area: main; /* Ocupa a área nomeada 'main' */
+        }
+        .aside {
+        background-color: #e67e22;
+        grid-area: aside; /* Ocupa a área nomeada 'aside' */
+        }
+        .footer {
+        background-color: #9b59b6;
+        grid-area: footer; /* Ocupa a área nomeada 'footer' */
+        }
+    
